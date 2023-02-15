@@ -1,4 +1,4 @@
-FROM postgres:12
+FROM postgres:13
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -15,11 +15,13 @@ RUN apt-get update --fix-missing && \
     libssl-dev \
     zlib1g-dev \
     libreadline8 \
-    libreadline-dev
+    libreadline-dev \
+    libpq5 \
+    libpq-dev
 
 # COPY scripts .
 # RUN chmod +x ./*.sh && bash ./install_pg_repack.sh
-RUN wget -q -O pg_repack.zip "https://api.pgxn.org/dist/pg_repack/1.4.5/pg_repack-1.4.5.zip" \
+RUN wget -q -O pg_repack.zip "https://api.pgxn.org/dist/pg_repack/1.4.6/pg_repack-1.4.6.zip" \
     && unzip pg_repack.zip \
     && rm pg_repack.zip
 

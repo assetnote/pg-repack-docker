@@ -60,5 +60,5 @@ Notes:
 
 ## building
 ```bash
-docker buildx build --platform linux/arm64,linux/amd64 --progress plain --rm -t 374764673621.dkr.ecr.us-east-1.amazonaws.com/pg-repack-docker:1.4.5-test -f ./Dockerfile --push .
+docker buildx build --platform linux/arm64,linux/amd64 --progress plain --rm -t 374764673621.dkr.ecr.us-east-1.amazonaws.com/pg-repack-docker:1.4.5 -f ./Dockerfile --push .
 ```
