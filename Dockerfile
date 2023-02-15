@@ -15,7 +15,9 @@ RUN apt-get update --fix-missing && \
     libssl-dev \
     zlib1g-dev \
     libreadline8 \
-    libreadline-dev
+    libreadline-dev \
+    libpq5 \
+    libpq-dev
 
 # COPY scripts .
 # RUN chmod +x ./*.sh && bash ./install_pg_repack.sh
