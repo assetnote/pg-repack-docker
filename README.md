@@ -57,3 +57,8 @@ docker run -e PGPASSWORD=supersecure -it --rm --network host hartmutcouk/pg-repa
 Notes:
 - uses host network: `--network host`
 - passing `PGPASSWORD` via env variable avoids password prompt (to e.g. exec via script/cron)
+
+## building
+```bash
+docker buildx build --platform linux/arm64,linux/amd64 --progress plain --rm -t 374764673621.dkr.ecr.us-east-1.amazonaws.com/pg-repack-docker:1.4.5-test -f ./Dockerfile --push .
+```
